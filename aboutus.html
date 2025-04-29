@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src=”https://cdn.tailwindcss.com”></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+
+  about us
+ <p class="text-center text-black-600 bg-yellow-500 text-l m-6 p-2">
+    &copy;2025 <b>Quarat Ul Qadir</b>.  All rights reserved.
+  </p>
+
+  
+  <style>
+    /* CSS Code */
+.swiper-wrapper {
+width: 100%;
+height: max-content !important;
+padding-bottom: 2px !important;
+-webkit-transition-timing-function: linear !important;
+transition-timing-function: linear !important;
+position: relative;
+}
+.swiper-pagination-bullet {
+background: #bfbecf;
+}
+  </style>
+<!--JAVASCRIPT CODE-->
+<script>
+  var swiper = new Swiper(".default-carousel", {
+  loop: true,
+  pagination: {
+  el: ".swiper-pagination",
+  clickable: true,
+  },
+  navigation: {
+  nextEl: ".swiper-button-next",
+  prevEl: ".swiper-button-prev",
+  },
+  });
+  </script>
+    </body>
+</html>
