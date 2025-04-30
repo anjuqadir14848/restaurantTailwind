@@ -2,196 +2,150 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Instagram Clone</title>
+  <title>WhatsApp Clone</title>
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: Arial, sans-serif;
+      font-family: 'Segoe UI', sans-serif;
     }
 
     body {
-      background-color: #fafafa;
+      background-color: #ece5dd;
+    }
+
+    .container {
       display: flex;
-    }
-
-    /* Left Sidebar */
-    .sidebar {
-      width: 250px;
       height: 100vh;
-      background: white;
-      border-right: 1px solid #dbdbdb;
-      padding: 20px;
-      position: fixed;
     }
 
-    .sidebar h2 {
-      font-family: 'Segoe UI', sans-serif;
-      font-size: 24px;
-      margin-bottom: 30px;
+    /* Sidebar */
+    .sidebar {
+      width: 30%;
+      background-color: #fff;
+      border-right: 1px solid #ddd;
+      display: flex;
+      flex-direction: column;
     }
 
-    .sidebar ul {
-      list-style: none;
+    .sidebar-header {
+      padding: 15px;
+      background-color: #f0f2f5;
+      border-bottom: 1px solid #ddd;
+      font-weight: bold;
     }
 
-    .sidebar ul li {
-      margin: 20px 0;
-      font-size: 16px;
+    .contact {
+      padding: 15px;
+      border-bottom: 1px solid #eee;
       cursor: pointer;
     }
 
-    /* Feed */
-    .feed {
-      margin-left: 270px;
-      width: 60%;
-      padding: 30px;
+    .contact:hover {
+      background-color: #f9f9f9;
     }
 
-    .post {
-      background: white;
-      border: 1px solid #dbdbdb;
-      border-radius: 5px;
-      margin-bottom: 20px;
+    /* Chat Area */
+    .chat {
+      width: 70%;
+      display: flex;
+      flex-direction: column;
+      background-color: #e5ddd5;
     }
 
-    .post-header, .post-footer {
+    .chat-header {
       padding: 15px;
-    }
-
-    .post-header {
+      background-color: #f0f2f5;
+      border-bottom: 1px solid #ddd;
       font-weight: bold;
-      border-bottom: 1px solid #eee;
     }
 
-    .post img {
-      width: 100%;
-      height: auto;
-      display: block;
+    .chat-messages {
+      flex: 1;
+      padding: 20px;
+      overflow-y: auto;
     }
 
-    .post-footer p {
-      margin-top: 10px;
+    .message {
+      max-width: 60%;
+      margin-bottom: 10px;
+      padding: 10px;
+      border-radius: 8px;
+      background-color: #dcf8c6;
+      align-self: flex-end;
     }
 
-    /* Right Sidebar */
-    .rightbar {
-      width: 300px;
-      padding: 30px;
-      margin-left: auto;
+    .message.received {
+      background-color: #fff;
+      align-self: flex-start;
     }
 
-    .profile {
+    .chat-input {
+      padding: 10px;
+      background-color: #f0f2f5;
       display: flex;
       align-items: center;
-      margin-bottom: 20px;
+      border-top: 1px solid #ddd;
     }
 
-    .profile img {
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      margin-right: 10px;
+    .chat-input input {
+      flex: 1;
+      padding: 10px;
+      border-radius: 20px;
+      border: 1px solid #ccc;
+      outline: none;
     }
 
-    .suggestions {
-      margin-top: 20px;
-    }
-
-    .suggestions h4 {
-      margin-bottom: 10px;
-    }
-
-    .suggestions ul {
-      list-style: none;
-    }
-
-    .suggestions li {
-      margin: 10px 0;
-      font-size: 14px;
-    }
-
-    @media (max-width: 1024px) {
-      .rightbar {
-        display: none;
-      }
-
-      .feed {
-        width: 100%;
-        margin-left: 270px;
-      }
+    .chat-input button {
+      margin-left: 10px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 20px;
+      background-color: #25d366;
+      color: white;
+      cursor: pointer;
     }
 
     @media (max-width: 768px) {
-      .sidebar {
-        display: none;
+      .container {
+        flex-direction: column;
       }
-
-      .feed {
-        margin-left: 0;
+      .sidebar, .chat {
         width: 100%;
-        padding: 10px;
+        height: 50%;
       }
     }
   </style>
 </head>
 <body>
 
-  <!-- Sidebar -->
-  <div class="sidebar">
-    <h2>Instagram</h2>
-    <ul>
-      <li>Home</li>
-      <li>Search</li>
-      <li>Explore</li>
-      <li>Reels</li>
-      <li>Messages</li>
-      <li>Notifications</li>
-      <li>Create</li>
-      <li>Profile</li>
-    </ul>
-  </div>
+  <div class="container">
 
-  <!-- Feed -->
-  <div class="feed">
-    <div class="post">
-      <div class="post-header">mohammad_aalim</div>
-      <img src="https://via.placeholder.com/600x400" alt="Post image">
-      <div class="post-footer">
-        ❤️ 👍 🔁
-        <p>This is an example post caption. #html #instagramclone</p>
+    <!-- Sidebar / Contacts -->
+    <div class="sidebar">
+      <div class="sidebar-header">Chats</div>
+      <div class="contact">John Doe</div>
+      <div class="contact">Jane Smith</div>
+      <div class="contact">Mohammad Aalim</div>
+    </div>
+
+    <!-- Chat Area -->
+    <div class="chat">
+      <div class="chat-header">Mohammad Aalim</div>
+      
+      <div class="chat-messages">
+        <div class="message received">Hi, how are you?</div>
+        <div class="message">I'm good, thanks! You?</div>
+        <div class="message received">All good here too.</div>
+      </div>
+
+      <div class="chat-input">
+        <input type="text" placeholder="Type a message">
+        <button>Send</button>
       </div>
     </div>
 
-    <div class="post">
-      <div class="post-header">user_123</div>
-      <img src="https://via.placeholder.com/600x400" alt="Post image">
-      <div class="post-footer">
-        ❤️ 👍 🔁
-        <p>Second post example with a caption here.</p>
-      </div>
-    </div>
-  </div>
-
-  <!-- Right Sidebar -->
-  <div class="rightbar">
-    <div class="profile">
-      <img src="https://via.placeholder.com/50" alt="Profile pic">
-      <div>
-        <strong>mohammad_aalim</strong><br>
-        Mohammad Aalim
-      </div>
-    </div>
-
-    <div class="suggestions">
-      <h4>Suggestions for you</h4>
-      <ul>
-        <li>user_one</li>
-        <li>user_two</li>
-        <li>user_three</li>
-      </ul>
-    </div>
   </div>
 
 </body>
