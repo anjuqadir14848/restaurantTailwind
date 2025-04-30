@@ -1,14 +1,198 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <title>Instagram Clone</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background-color: #fafafa;
+      display: flex;
+    }
+
+    /* Left Sidebar */
+    .sidebar {
+      width: 250px;
+      height: 100vh;
+      background: white;
+      border-right: 1px solid #dbdbdb;
+      padding: 20px;
+      position: fixed;
+    }
+
+    .sidebar h2 {
+      font-family: 'Segoe UI', sans-serif;
+      font-size: 24px;
+      margin-bottom: 30px;
+    }
+
+    .sidebar ul {
+      list-style: none;
+    }
+
+    .sidebar ul li {
+      margin: 20px 0;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    /* Feed */
+    .feed {
+      margin-left: 270px;
+      width: 60%;
+      padding: 30px;
+    }
+
+    .post {
+      background: white;
+      border: 1px solid #dbdbdb;
+      border-radius: 5px;
+      margin-bottom: 20px;
+    }
+
+    .post-header, .post-footer {
+      padding: 15px;
+    }
+
+    .post-header {
+      font-weight: bold;
+      border-bottom: 1px solid #eee;
+    }
+
+    .post img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .post-footer p {
+      margin-top: 10px;
+    }
+
+    /* Right Sidebar */
+    .rightbar {
+      width: 300px;
+      padding: 30px;
+      margin-left: auto;
+    }
+
+    .profile {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .profile img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+
+    .suggestions {
+      margin-top: 20px;
+    }
+
+    .suggestions h4 {
+      margin-bottom: 10px;
+    }
+
+    .suggestions ul {
+      list-style: none;
+    }
+
+    .suggestions li {
+      margin: 10px 0;
+      font-size: 14px;
+    }
+
+    @media (max-width: 1024px) {
+      .rightbar {
+        display: none;
+      }
+
+      .feed {
+        width: 100%;
+        margin-left: 270px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .sidebar {
+        display: none;
+      }
+
+      .feed {
+        margin-left: 0;
+        width: 100%;
+        padding: 10px;
+      }
+    }
+  </style>
 </head>
 <body>
-    <h1>
-        hello
-        team
-    </h1>
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <h2>Instagram</h2>
+    <ul>
+      <li>Home</li>
+      <li>Search</li>
+      <li>Explore</li>
+      <li>Reels</li>
+      <li>Messages</li>
+      <li>Notifications</li>
+      <li>Create</li>
+      <li>Profile</li>
+    </ul>
+  </div>
+
+  <!-- Feed -->
+  <div class="feed">
+    <div class="post">
+      <div class="post-header">mohammad_aalim</div>
+      <img src="https://via.placeholder.com/600x400" alt="Post image">
+      <div class="post-footer">
+        ❤️ 👍 🔁
+        <p>This is an example post caption. #html #instagramclone</p>
+      </div>
+    </div>
+
+    <div class="post">
+      <div class="post-header">user_123</div>
+      <img src="https://via.placeholder.com/600x400" alt="Post image">
+      <div class="post-footer">
+        ❤️ 👍 🔁
+        <p>Second post example with a caption here.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Right Sidebar -->
+  <div class="rightbar">
+    <div class="profile">
+      <img src="https://via.placeholder.com/50" alt="Profile pic">
+      <div>
+        <strong>mohammad_aalim</strong><br>
+        Mohammad Aalim
+      </div>
+    </div>
+
+    <div class="suggestions">
+      <h4>Suggestions for you</h4>
+      <ul>
+        <li>user_one</li>
+        <li>user_two</li>
+        <li>user_three</li>
+      </ul>
+    </div>
+  </div>
+
 </body>
 </html>
