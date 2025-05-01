@@ -1,1 +1,143 @@
 
+
+    body {
+      background: #f0f2f5;
+    }
+
+    /* Navbar */
+    .navbar {
+      background: #1877f2;
+      color: white;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .navbar .logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .navbar input {
+      padding: 6px 10px;
+      border: none;
+      border-radius: 20px;
+      outline: none;
+      width: 200px;
+    }
+
+    .container {
+      display: flex;
+      margin-top: 20px;
+      padding: 20px;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      width: 20%;
+      padding: 10px;
+    }
+
+    .sidebar ul {
+      list-style: none;
+    }
+
+    .sidebar li {
+      margin: 15px 0;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    /* Main Content */
+    .main {
+      width: 60%;
+      padding: 10px;
+    }
+
+    .post {
+      background: white;
+      padding: 15px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .post h3 {
+      margin-bottom: 10px;
+    }
+
+    .post p {
+      font-size: 15px;
+    }
+
+    /* Right Sidebar */
+    .rightbar {
+      width: 20%;
+      padding: 10px;
+    }
+
+    .rightbar h4 {
+      margin-bottom: 10px;
+    }
+
+    .rightbar ul {
+      list-style: none;
+    }
+
+    .rightbar li {
+      margin: 10px 0;
+      font-size: 14px;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+      .sidebar, .rightbar, .main {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <div class="logo">Facebook</div>
+    <input type="text" placeholder="Search Facebook...">
+  </div>
+
+  <!-- Page layout -->
+  <div class="container">
+    <!-- Left Sidebar -->
+    <div class="sidebar">
+      <ul>
+        <li>Home</li>
+        <li>Friends</li>
+        <li>Groups</li>
+        <li>Marketplace</li>
+        <li>Watch</li>
+      </ul>
+    </div>
+
+    <!-- Right Sidebar -->
+    <div class="rightbar">
+      <h4>Suggestions</h4>
+      <ul>
+        <li>Friend 1</li>
+        <li>Friend 2</li>
+        <li>Friend 3</li>
+        <li>we have changed this line</li>
+
+
+    </ul>
+    </div>
+  </div>
+
+</body>
+</html>
+
